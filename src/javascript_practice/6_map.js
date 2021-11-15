@@ -20,13 +20,13 @@ const instructors = [
 
 const instructorNames = instructors.map(instructor => instructor.name);
 console.log(instructorNames);
-
+// 1. We create a variable called instructorNames that store the result as an array of objects. 2. We are calling .map on the instructors array: instructors.map. 3. The instructor parameter in .map can be named anything, usually something related to the array
 const instructorSpecialties = instructors.map(instructor => instructor.specialty);
 console.log(instructorSpecialties)
 
 //The .map()function requires a return value. This is a key rule of using .map(), so the fat arrow is taking care of that requirement. 
 
-const instructorInfo = instructors.map(i => (i.name) + ': ' + (i.specialty));
+const instructorInfo = instructors.map(instructor => (instructor.name) + ': ' + (instructor.specialty));
 console.log(instructorInfo)
 
 let kvArray = [
@@ -41,3 +41,4 @@ let reformattedArray = kvArray.map(obj => {
     rObj[obj.key] = obj.value;
     console.log(rObj);
 });
+//The returned 'rObj' is a correctly formatted {key: value} style object for each object in the original array.

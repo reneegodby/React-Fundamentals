@@ -3,7 +3,7 @@
 //we name the class
 class User{
     constructor(first, last, e){ 
-        //we call the constructor func and create paraments
+        //we call the constructor func and create parameters
         //these will be values that we want to be passed in and stored in the object constructor(first, last, e)
         this.f = first;
         this.l = last;
@@ -12,7 +12,7 @@ class User{
 }
 
 let userOne = new User("Paul", "O'Connor", "poconnor@elevenfifty.org");
-console.log(userOne.first); //prints undefined
+console.log(userOne.first); //prints undefined. While 'first' is the parameter name in the constructor, it's not a property on the object.
 console.log(userOne.f); //prints Paul
 console.log(userOne.l); //prints O'Connor
 console.log(userOne);  //prints User { f: 'Paul', l: "O'Connor", email: 'poconnor@elevenfifty.org' }
