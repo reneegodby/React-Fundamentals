@@ -15,6 +15,8 @@ import Hooks from '../concepts/Hooks';
 import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 import NytApp from '../apps/nyt-app/NytApp';
 import MovieApp from '../apps/the-movie-db/MovieApp';
+import Bitcoin from '../apps/bitcoin-api-app/Bitcoin';
+
 
 
 const Sidebar = () => {
@@ -33,6 +35,7 @@ const Sidebar = () => {
                     <li><Link to = '/timer'>Timers</Link></li>
                     <li><Link to = '/nytapp'>NYT App</Link></li>
                     <li><Link to = '/movieapp'>Movie App</Link></li>
+                    <li><Link to = '/bitcoin'>Bitcoin App</Link></li>
                     {/* link ensures we're being redirected to the correct path without refreshing the pg*/}
                 </ul>
             </div>
@@ -50,6 +53,7 @@ const Sidebar = () => {
                     <Route exact path='/timer'><TimePiecesApp /></Route>
                     <Route exact path='/nytapp'><NytApp /></Route>
                     <Route exact path='/movieapp'><MovieApp /></Route>
+                    <Route exact path='/bitcoin'><Bitcoin /></Route>
                     {/* react-router-dom doesn't know what to do until we add the route. Exact limits the path that can match this route to only the words shown.  */}
                 </Switch>
                 {/* we use Switch to wrap our Routes since the Switch acts as a vanilla JS switch statement, and iterates over the routes and only renders the first one that matches the current path name. */}
